@@ -1,0 +1,18 @@
+{
+  "record": "21236479",
+  "present_in_repo": 12,
+  "original_record_files": 24,
+  "source_file_sha256_and_zenodo_md5": "ALL_PASS",
+  "original_file_bytes_unmodified": true,
+  "release_bundle_sha256": "41954049f86e4a88056eab18f3de659fed756003abe421826631cb94dccbbadd",
+  "repo_starter_sha256": "e5dbde81b31fa7fd208de266586fc4a9d35cc2d77ceeebf6635bbe10918151f4",
+  "embedded_research_archives": [],
+  "manifests": [],
+  "pdfs": [
+    {
+      "name": "GTE_3D_MEDIUM_V3_PUBLIC_MANUSCRIPT.pdf",
+      "pages": 3,
+      "page1_title_text": "A 3D Medium Operatorial Framework for Environmental Tidal Response: Negative Metric-Gate Audit and Operatorial Status Update Pietro Risi Independent researcher Version 3."
+    }
+  ]
+}

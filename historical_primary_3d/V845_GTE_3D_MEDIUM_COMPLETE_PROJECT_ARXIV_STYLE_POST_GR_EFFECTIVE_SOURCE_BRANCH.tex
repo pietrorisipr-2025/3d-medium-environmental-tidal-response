@@ -1,0 +1,363 @@
+
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs,longtable,array}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{microtype}
+
+\hypersetup{colorlinks=true,linkcolor=blue!50!black,urlcolor=blue!50!black,citecolor=blue!50!black}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{GTE 3D Medium}
+\rhead{V845 post GR effective-source branch}
+\cfoot{\thepage}
+\setlength{\parskip}{0.55em}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{topsep=0.2em,itemsep=0.15em,parsep=0em}
+\setlist[enumerate]{topsep=0.2em,itemsep=0.15em,parsep=0em}
+\sloppy
+\emergencystretch=3em
+\newcommand{\code}[1]{\texttt{\detokenize{#1}}}
+\newcommand{\status}[1]{\textsf{\textbf{#1}}}
+\newcommand{\warningbox}[1]{\begin{center}\begin{minipage}{0.93\linewidth}\color{red!60!black}\hrule\vspace{0.5em}\color{black}#1\vspace{0.5em}\color{red!60!black}\hrule\end{minipage}\end{center}}
+
+\title{\textbf{A 3D Medium Operatorial Framework for Environmental Tidal Response}\\
+\large Complete Project Manuscript after Z-line All-Sigma and GR Effective-Source Diagnostic Branch\\
+\large arXiv-style / Zenodo-ready working paper, V845}
+\author{Pietro R.\\Independent exploratory research project}
+\date{2026-06-23T12:04:33Z}
+
+\begin{document}
+\maketitle
+
+\warningbox{\textbf{Not peer reviewed.} This manuscript is exploratory and operatorial. It does not claim a physical theory of gravity, a dark matter derivation, a dark energy derivation, an observational detection, or a validated physical field. The V837-V844 branch is a GR effective-source diagnostic branch only. It identifies useful structure and blockers; it does not promote any toy or ansatz to real physics. ENV\_RESPONSE remains null-closed with current assets.}
+
+\begin{abstract}
+This V845 manuscript updates the complete project state after the V837-V844 GR effective-source diagnostic branch. The operatorial core and Z-line all-sigma results remain the defensible computational layer. The new branch asks a narrower question: if a compact static spherical toy metric is inserted into standard general relativity, what effective stress-energy source is required, and can that source be interpreted as real matter?
+
+The branch locks the effective-source formulas for $f(r)=1-2Gm(r)/r$, verifies Schwarzschild and de Sitter sanity checks, tests compact mass functions, proves exact interval properties of the S5 phenomenological anisotropic-fluid source, explores a formal magnetic nonlinear-electrodynamics reconstruction, and closes the simple canonical scalar route as a negative control. The result is mixed but useful: S5 is a coherent phenomenological GR diagnostic, but not a physical matter model. NED is formally action-like but blocked for exact compact support by the Maxwell weak-field limit; canonical scalar matter is structurally obstructed. No physical route is reopened.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section{Executive status after V845}
+
+The current consolidated status is:
+
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+Layer & Status \\
+\midrule
+Baseline operatorial core & \status{FULL\_MATRIX\_OPERATORIAL\_NO\_HARD\_FAILS\_WITH\_WEAK\_FLAGS} \\
+V806/V807 baseline & 151,128 rows; 150,958 pass; 170 weak; 0 fail \\
+V830 radial-angle null control & 151,128 rows; 150,845 pass; 283 weak; 0 fail \\
+Z-line all-sigma & 2,099 / 2,099 targets; 40 / 40 V806 runs; 335,840 / 335,840 rows \\
+ENV\_RESPONSE & \status{NULL\_CLOSED\_WITH\_CURRENT\_ASSETS} \\
+GR effective-source branch & \status{DIAGNOSTIC\_ONLY} \\
+Physical matter/action & \status{NOT\_SELECTED} \\
+Physical gravity/DM/DE claim & \status{FORBIDDEN} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Operatorial result preserved}
+
+The operatorial pipeline remains the defensible core. It maps density-grid inputs to weak-field tidal/electric-Weyl-like proxies, radial environmental summaries, and an auxiliary screened response. The baseline and null-control matrix results remain diagnostic and computational. They are not observations and not a physical theory.
+
+The Z-line all-sigma center-matched matrix remains:
+
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+Quantity & Count \\
+\midrule
+Targets covered & 2,099 / 2,099 \\
+V806 runs completed & 40 / 40 \\
+Response rows covered & 335,840 / 335,840 \\
+Coverage status & PASS full coverage \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{GR effective-source diagnostic route}
+
+The V837 branch starts from the static spherical one-function metric:
+\begin{equation}
+ds^2=-f(r)dt^2+f(r)^{-1}dr^2+r^2d\Omega^2,
+\end{equation}
+with
+\begin{equation}
+f(r)=1-\frac{2Gm(r)}{r}.
+\end{equation}
+
+In standard GR this corresponds to an effective anisotropic source:
+\begin{equation}
+\rho_{\rm eff}=\frac{m'(r)}{4\pi r^2},
+\end{equation}
+\begin{equation}
+p_{r,\rm eff}=-\frac{m'(r)}{4\pi r^2}=-\rho_{\rm eff},
+\end{equation}
+\begin{equation}
+p_{t,\rm eff}=-\frac{m''(r)}{8\pi r}.
+\end{equation}
+
+This is a reconstruction of the source required by GR. It is not a derivation of a new theory.
+
+\section{Sanity checks}
+
+V838 verified the formulas against standard checks.
+
+\begin{itemize}
+\item Schwarzschild vacuum: $m(r)=M$ gives $\rho=p_r=p_t=0$.
+\item de Sitter core: $m(r)=\Lambda r^3/(6G)$ gives $\rho=\Lambda/(8\pi G)$ and $p_r=p_t=-\rho$.
+\item smoothstep compact matching: $m(r)=M(10x^3-15x^4+6x^5)$ with $x=r/R$ satisfies the intended compact matching at formula level.
+\end{itemize}
+
+\section{Compact mass-function testbed}
+
+V839 tested three compact families:
+
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Family & Definition & Diagnostic outcome \\
+\midrule
+S3 & $3x^2-2x^3$ & rejected as regular-center negative control \\
+S5 & $10x^3-15x^4+6x^5$ & best compact toy candidate, not physical \\
+S7 & $35x^4-84x^5+70x^6-20x^7$ & smoother but tangential NEC sensitive \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The conclusion is that S5 is the best diagnostic toy among those tested, but it is still not a physical matter model.
+
+\section{S5 anisotropic-fluid interval proof}
+
+For S5:
+\begin{equation}
+S_5(x)=10x^3-15x^4+6x^5,\qquad x=r/R,
+\end{equation}
+define
+\begin{equation}
+A=\frac{15M}{2\pi R^3}.
+\end{equation}
+
+The effective source can be written:
+\begin{equation}
+\frac{\rho}{A}=(1-x)^2,
+\end{equation}
+\begin{equation}
+\frac{p_r}{A}=-(1-x)^2,
+\end{equation}
+\begin{equation}
+\frac{p_t}{A}=-(1-x)(1-2x).
+\end{equation}
+
+V841 proves:
+
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+Condition & Verdict \\
+\midrule
+Regular center & PASS \\
+Compact boundary formula & PASS \\
+WEC & PASS \\
+Radial NEC & PASS, saturated \\
+Tangential NEC & PASS \\
+Conservation identity & PASS \\
+SEC & FAIL for $0\le x<1/2$ \\
+Tangential DEC & FAIL for $2/3<x<1$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Thus S5 is a coherent phenomenological anisotropic-fluid diagnostic, but it is not ordinary matter and not fundamental physics.
+
+\section{NED magnetic reconstruction and blocker}
+
+V842 explored a magnetic nonlinear-electrodynamics route under the convention
+\begin{equation}
+F=\frac{F_{ab}F^{ab}}{4},\qquad F(r)=\frac{q^2}{2r^4}.
+\end{equation}
+
+For the magnetic sector:
+\begin{equation}
+\rho=-L,\qquad p_r=L=-\rho,\qquad p_t=L-2F L_F.
+\end{equation}
+
+The formal interior reconstruction gives:
+\begin{equation}
+L(r)=-\rho(r),
+\end{equation}
+and
+\begin{equation}
+L(F)=-A\left(1-\frac{(q^2/(2F))^{1/4}}{R}\right)^2.
+\end{equation}
+
+The identity $p_t^{\rm NED}-p_t=0$ passes formally. However, V843 shows that exact compact support requires
+\begin{equation}
+L(F)=0,\qquad L_F(F)=0
+\end{equation}
+for $0<F\le F_R$, where $F_R=q^2/(2R^4)$.
+
+This gives $L(F)/F\to 0$ as $F\to 0$, whereas the Maxwell weak-field limit requires $L(F)/F\to -1$. Therefore the exact compact S5 NED route is physically blocked unless the model is changed. A Maxwell-tail alternative breaks exact compact support and creates a different noncompact model.
+
+\section{Canonical scalar obstruction}
+
+V844 checks the simplest scalar route. For a minimally coupled static canonical scalar in a static non-horizon region $f(r)>0$, define
+\begin{equation}
+X=f(r)\phi'(r)^2\ge 0.
+\end{equation}
+
+The stress pattern is:
+\begin{equation}
+\rho=\frac{1}{2}X+V,\qquad p_r=\frac{1}{2}X-V,\qquad p_t=-\frac{1}{2}X-V.
+\end{equation}
+
+Therefore:
+\begin{equation}
+\rho+p_r=X,\qquad \rho+p_t=0.
+\end{equation}
+
+S5 requires $p_r=-\rho$, hence $\rho+p_r=0$. In the $f>0$ region this forces $X=0$ and therefore $\phi'=0$. The scalar then becomes isotropic and vacuum-like:
+\begin{equation}
+p_r=p_t=-\rho.
+\end{equation}
+
+But S5 has
+\begin{equation}
+\rho+p_t=A\,x(1-x)>0\qquad (0<x<1).
+\end{equation}
+
+Thus a simple canonical static scalar cannot reproduce the S5 source pattern. A simple phantom sign variant is also obstructed because it still forces $X=0$. Noncanonical scalar routes are not ruled out, but they remain high-risk and require independent stability gates.
+
+\section{What the GR effective-source branch establishes}
+
+The V837-V844 branch establishes:
+
+\begin{itemize}
+\item the toy metric can be interpreted as a GR effective-source diagnostic;
+\item S5 is the best compact phenomenological source tested so far;
+\item S5 passes regularity, WEC, NEC, and conservation;
+\item S5 fails SEC in the inner region and tangential DEC in the outer region;
+\item NED is formally promising but blocked for exact compact support by the Maxwell limit;
+\item canonical scalar matter is structurally obstructed.
+\end{itemize}
+
+The branch does not establish:
+
+\begin{itemize}
+\item a physical matter action;
+\item a stable field theory;
+\item local constraints;
+\item cosmological/lensing consistency;
+\item a dark matter or dark energy derivation;
+\item a physical theory of gravity.
+\end{itemize}
+
+\section{GitHub scientific memory guidance}
+
+A lightweight GitHub repository can be useful as scientific memory, but it should not become a raw-data dump.
+
+Good GitHub content:
+
+\begin{itemize}
+\item README and claim boundary;
+\item small scripts from V837-V844;
+\item compact CSV summaries;
+\item manifests and SHA256 sidecars;
+\item LaTeX source and selected small PDFs;
+\item release notes and reproducibility instructions.
+\end{itemize}
+
+Better as GitHub Releases assets:
+
+\begin{itemize}
+\item compact ZIP packages V837-V845;
+\item manuscript PDFs/TEX;
+\item small recovery packages.
+\end{itemize}
+
+Better for Zenodo or external archival storage:
+
+\begin{itemize}
+\item large local results;
+\item raw or heavy derived data bundles;
+\item 400 MB or multi-GB archives;
+\item citable scientific data intended for DOI.
+\end{itemize}
+
+Do not publish without review:
+
+\begin{itemize}
+\item third-party raw data with unclear redistribution rights;
+\item private paths, usernames, API keys, tokens, or local metadata;
+\item licensed data not meant for redistribution.
+\end{itemize}
+
+\section{Conclusion}
+
+The project has made a real methodological advance, not a physical one. The operatorial core and Z-line matrix remain strong diagnostic results. The GR effective-source branch shows that a compact S5 source is mathematically coherent as a phenomenological anisotropic source, but physical interpretation remains blocked. NED fails the compact-support/Maxwell-limit gate for exact compact S5, and canonical scalar matter is structurally obstructed. The correct conclusion remains fail-closed: useful diagnostics, no physical claim.
+
+\newpage
+\appendix
+
+\section{V837-V844 branch table}
+
+\footnotesize
+\begin{longtable}{p{0.10\linewidth}p{0.28\linewidth}p{0.42\linewidth}p{0.14\linewidth}}
+\toprule
+Version & Role & Result & Claim boundary \\
+\midrule
+\endfirsthead
+\toprule
+Version & Role & Result & Claim boundary \\
+\midrule
+\endhead
+V837 & GR effective stress-energy reconstruction prereg & Locked formulas for f(r)=1-2Gm(r)/r: rho=m'/(4pi r\textasciicircum{}2), p\_r=-rho, p\_t=-m''/(8pi r). & GR diagnostic only. \\
+V838 & Symbolic sanity checks & Schwarzschild vacuum PASS; de Sitter core PASS; smoothstep compact matching formula PASS. & No matter/action/stability claim. \\
+V839 & Compact mass-function testbed & S3 rejected; S5 best compact toy candidate; S7 shows tangential NEC sensitivity. & Toy diagnostic only. \\
+V840 & Action/matter model search prereg & Anisotropic fluid ranked first diagnostically; NED ranked highest-risk action-like candidate; canonical scalar ranked obstruction control. & No model selected as physical. \\
+V841 & S5 interval energy proof & Regular center PASS, compact boundary formula PASS, WEC PASS, NEC PASS, conservation PASS; SEC fails inner region; tangential DEC fails outer region. & Phenomenological anisotropic fluid diagnostic only. \\
+V842 & Magnetic NED formal reconstruction & Formal L(F) reconstruction identity PASS and single-valued interior branch PASS. & Physical NED not selected; blockers remain. \\
+V843 & NED Maxwell/threshold blocker & Exact compact support requires L=L\_F=0 outside; conflicts with Maxwell weak-field limit; Maxwell tail breaks compact S5. & Exact compact S5 NED physical route blocked. \\
+V844 & Canonical scalar obstruction & p\_r=-rho forces zero scalar gradient; zero gradient makes isotropic vacuum-like source; S5 anisotropy blocks match. & Canonical scalar route closed as negative control. \\
+\bottomrule
+\end{longtable}
+\normalsize
+
+\section{Claim boundary table}
+
+\footnotesize
+\begin{longtable}{p{0.38\linewidth}p{0.16\linewidth}p{0.38\linewidth}}
+\toprule
+Claim & Status & Safe wording \\
+\midrule
+\endfirsthead
+\toprule
+Claim & Status & Safe wording \\
+\midrule
+\endhead
+The operatorial core and Z-line all-sigma results remain valid as diagnostics. & Allowed & Operatorial diagnostic results with no physical/observational claim. \\
+The GR effective-source branch converts S5 into a physical matter model. & Forbidden & S5 is a phenomenological GR effective-source diagnostic. \\
+S5 passes regularity, WEC, NEC and conservation. & Allowed & S5 passes selected exact interval diagnostics. \\
+S5 is ordinary matter. & Forbidden & SEC and tangential DEC blockers prevent ordinary matter interpretation. \\
+NED magnetism physically solves the model. & Forbidden & Formal NED reconstruction passes internally but Maxwell/threshold blockers remain. \\
+Canonical scalar is ruled out for this S5 pattern. & Allowed narrowly & Simple static canonical scalar in f>0 region is obstructed; broader noncanonical scalar theories are not ruled out. \\
+ENV\_RESPONSE was executed. & Forbidden & ENV\_RESPONSE remains null-closed with current assets. \\
+Gravity, DM or DE has been derived. & Forbidden & No physical gravity, dark matter, or dark energy derivation. \\
+\bottomrule
+\end{longtable}
+\normalsize
+
+\end{document}

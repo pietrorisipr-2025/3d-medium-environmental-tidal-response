@@ -1,0 +1,36 @@
+{
+  "title": "A 3D Medium Operatorial Framework for Environmental Tidal Response: Negative Metric-Gate Audit and Operatorial Status Update",
+  "version": "3.0.0",
+  "upload_type": "publication",
+  "publication_type": "workingpaper",
+  "creators": [
+    {
+      "name": "Risi, Pietro",
+      "affiliation": "Independent researcher"
+    }
+  ],
+  "description": "Version 3.0.0 status update for the existing GTE 3D Medium Zenodo version chain. It adds the V993-V1001 negative metric-gate audit and a cleaned public manuscript after reviewer-style corrections. The release preserves the 3D operatorial environmental tidal-response core, reclassifies the 2D/EFT component as an operatorial memory-screening residual only, and downgrades the 3D-to-2D relation to architectural composition/bookkeeping between modules. No new numerical execution, fit, detection, dark-matter claim, dark-energy claim, local PPN pass, Newtonian derivation, or gravity derivation is made.",
+  "keywords": [
+    "operatorial framework",
+    "environmental tidal response",
+    "screened Poisson",
+    "Yukawa kernel",
+    "cosmic web",
+    "negative result",
+    "claim boundary",
+    "fail-closed audit"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.20594324",
+      "relation": "isNewVersionOf",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.20834009",
+      "relation": "isDerivedFrom",
+      "scheme": "doi"
+    }
+  ],
+  "notes": "Upload as a new version in the existing Zenodo record/version chain, not as a new standalone record. Creator must remain Risi, Pietro. Do not upload heavy recovery packages or recursive preparation bundles."
+}

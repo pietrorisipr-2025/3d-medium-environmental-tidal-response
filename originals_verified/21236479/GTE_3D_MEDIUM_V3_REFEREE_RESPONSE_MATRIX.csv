@@ -1,0 +1,7 @@
+issue,status,action
+Creator metadata,CORRECTED,"Creator locked as Risi, Pietro"
+Bibliography,CORRECTED,"Minimal references added, including screened kernel, chameleon/screening, Vainshtein, and cosmic-web/tidal classification"
+Bridge wording,CORRECTED,"Downgraded to architectural composition, not scientific bridge result"
+PDF front matter,CORRECTED,Internal V1020 patch label and UTC creation stamp removed
+Release notes inside PDF,CORRECTED,Moved to separate release-notes file
+U semantics,CORRECTED,U clarified as auxiliary operatorial response variable
